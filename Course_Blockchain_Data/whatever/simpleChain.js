@@ -8,5 +8,18 @@ class Block {
   }
 }
 
+class Blockchain {
+  constructor() {
+    this.chain = [];
+  }
+
+  addBlock(newBlock) {
+    this.chain.push(newBlock);
+  }
+}
+
 const wow = new Block('Seriously Fucking Stupid');
 console.log(wow);
+const bc = new Blockchain();
+bc.addBlock(wow);
+console.log(bc.chain);
